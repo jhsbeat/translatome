@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :user_files
+  resources :file_statuses
   devise_for :users
   get 'welcome/index'
 

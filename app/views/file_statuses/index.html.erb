@@ -1,0 +1,27 @@
+<h1>Listing file_statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @file_statuses.each do |file_status| %>
+      <tr>
+        <td><%= file_status.code %></td>
+        <td><%= file_status.name %></td>
+        <td><%= link_to 'Show', file_status %></td>
+        <td><%= link_to 'Edit', edit_file_status_path(file_status) %></td>
+        <td><%= link_to 'Destroy', file_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New File status', new_file_status_path %>
