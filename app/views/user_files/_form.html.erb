@@ -13,12 +13,48 @@
 
   <div class="field">
     <%= f.label :file %><br>
-    <%= f.file_field :file %>
+    <%= f.file_field :file %><br>
     <%= f.hidden_field :file_cache %>
   </div>
   <div class="field">
     <%= f.label :file_status_id %><br>
     <%= f.text_field :file_status_id %>
+  </div>
+  <div class="field">
+    <%= f.label :file_type_id %><br>
+    <%= f.text_field :file_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :producer %><br>
+    <%= f.text_field :producer %>
+  </div>
+  <div class="field">
+    <%= f.label :creator %><br>
+    <%= f.text_field :creator %>
+  </div>
+  <div class="field">
+    <%= f.label :creation_date %><br>
+    <%= f.datetime_select :creation_date %>
+  </div>
+  <div class="field">
+    <%= f.label :mod_date %><br>
+    <%= f.datetime_select :mod_date %>
+  </div>
+  <div class="field">
+    <%= f.label :metadata %><br>
+    <%= f.text_area :metadata %>
+  </div>
+  <div class="field">
+    <%= f.label :page_count %><br>
+    <%= f.number_field :page_count %>
+  </div>
+  <div class="field">
+    <%= f.label :pdf_version %><br>
+    <%= f.text_field :pdf_version %>
   </div>
   <div class="actions">
     <%= f.submit %>

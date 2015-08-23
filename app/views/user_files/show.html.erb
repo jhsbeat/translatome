@@ -15,5 +15,50 @@
   <%= @user_file.file_status %>
 </p>
 
+<p>
+  <strong>File type:</strong>
+  <%= @user_file.file_type %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @user_file.title %>
+</p>
+
+<p>
+  <strong>Producer:</strong>
+  <%= @user_file.producer %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @user_file.creator %>
+</p>
+
+<p>
+  <strong>Creation date:</strong>
+  <%= @user_file.creation_date %>
+</p>
+
+<p>
+  <strong>Mod date:</strong>
+  <%= @user_file.mod_date %>
+</p>
+
+<p>
+  <strong>Metadata:</strong>
+  <%= @user_file.metadata %>
+</p>
+
+<p>
+  <strong>Page count:</strong>
+  <%= @user_file.page_count %>
+</p>
+
+<p>
+  <strong>Pdf version:</strong>
+  <%= @user_file.pdf_version %>
+</p>
+
 <%= link_to 'Edit', edit_user_file_path(@user_file) %> |
 <%= link_to 'Back', user_files_path %>

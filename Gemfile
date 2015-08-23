@@ -47,3 +47,8 @@ gem 'mysql2'
 # Carrierwave
 gem 'carrierwave'
 
+# PDF reader
+gem 'pdf-reader'
+
+# Pry byebug
+gem 'pry-byebug'

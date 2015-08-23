@@ -43,6 +43,6 @@ class UserFilesController < ApplicationController
     end
 
     def user_file_params
-      params.require(:user_file).permit(:file, :file_status_id)
+      params.require(:user_file).permit(:user_id, :file, :file_status_id, :file_type_id, :title, :producer, :creator, :creation_date, :mod_date, :metadata, :page_count, :pdf_version)
     end
 end

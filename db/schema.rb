@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150823043702) do
+ActiveRecord::Schema.define(version: 20150823053306) do
 
   create_table "file_statuses", force: true do |t|
+    t.string   "code"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "file_types", force: true do |t|
     t.string   "code"
     t.string   "name"
     t.datetime "created_at"
@@ -24,11 +31,21 @@ ActiveRecord::Schema.define(version: 20150823043702) do
     t.integer  "user_id"
     t.string   "file"
     t.integer  "file_status_id"
+    t.integer  "file_type_id"
+    t.string   "title"
+    t.string   "producer"
+    t.string   "creator"
+    t.datetime "creation_date"
+    t.datetime "mod_date"
+    t.text     "metadata"
+    t.integer  "page_count"
+    t.string   "pdf_version"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "user_files", ["file_status_id"], name: "index_user_files_on_file_status_id", using: :btree
+  add_index "user_files", ["file_type_id"], name: "index_user_files_on_file_type_id", using: :btree
   add_index "user_files", ["user_id"], name: "index_user_files_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
